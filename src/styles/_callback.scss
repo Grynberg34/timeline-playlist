@@ -1,0 +1,16 @@
+@use 'font';
+@use 'colors';
+
+.callback {
+    background-color: colors.$black;
+    min-height: 100vh;
+
+    .callback__msg {
+        margin-top: 0;
+        padding-top: 30vh;
+        font-size: 3vw;
+        font-weight: 600;
+        color: colors.$lightGreen;
+        text-align: center;
+    }
+}

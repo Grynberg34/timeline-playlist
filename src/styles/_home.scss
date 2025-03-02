@@ -1,0 +1,7 @@
+@use 'font';
+@use 'colors';
+
+.home {
+    background-color: colors.$black;
+    min-height: 100vh;
+}

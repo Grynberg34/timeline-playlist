@@ -1,0 +1,11 @@
+@use 'font';
+@use 'colors';
+@use 'header';
+@use 'spotify';
+@use 'home';
+@use 'callback';
+
+body {
+    font-family: "proxima-nova", sans-serif;
+    margin: 0;
+}

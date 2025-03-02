@@ -1,0 +1,30 @@
+@use 'font';
+@use 'colors';
+
+.header {
+    margin-top: 8vh;
+
+    .header__title {
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+        font-size: 3.4vw;
+        font-weight: 300;
+        color: colors.$white;
+        text-align: center;
+        
+    }
+
+    .header__title--green {
+        color: colors.$green;
+        font-weight: 600;
+    }
+
+
+    .header__subtitle {
+        font-size: 0.8vw;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        color: colors.$lightGreen;
+    }
+}

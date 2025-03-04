@@ -1,5 +1,6 @@
 "use client";
 import Header from '../components/Header/Header';
+import Filters from '../components/Filters/Filters';
 import Grid from '@mui/material/Grid2';
 
 
@@ -13,7 +14,9 @@ export default function Home() {
 
         <Grid size={{ xs: 12, sm: 6 }}>
 
-          <Header></Header>
+          <Header />
+
+          <Filters />
 
         </Grid>
 

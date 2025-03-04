@@ -1,0 +1,183 @@
+@use 'font';
+@use 'colors';
+
+.filters {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+
+
+    .filters__timeline {
+        margin-bottom: 4vh;
+
+        .filters__timeline__title {
+            margin-bottom: 4vh;
+            font-size: 1.5vw;
+            font-weight: 400;
+            color: colors.$white;
+            text-align: center;
+        }
+
+        .filters__timeline__slider {
+            color: colors.$green;
+        }
+    }
+
+    .filters__genres {
+        margin-bottom: 6vh;
+
+        .filters__genres__title {
+            margin-bottom: 2vh;
+            font-size: 1.5vw;
+            font-weight: 400;
+            color: colors.$white;
+            text-align: center;
+        }
+
+        .filters__genres__genre {
+            font-size: 0.4vw;
+            font-weight: 400;
+            color: colors.$lightGreen;
+
+            .filters__genres__genre__checkbox {
+                color: colors.$white;
+            }
+        }
+
+        .filters__genres__toggle {
+            width: 100%;
+            margin-top: 2vh;
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            font-size: 0.75vw;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 700;
+            border-radius: 0.2vw;
+            text-transform: capitalize;
+            background-color: colors.$lightGreen;
+            border: none;
+            color: colors.$black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: colors.$white;
+            }
+
+        }
+    }
+
+    .filters__popularity {
+        margin-bottom: 6vh;
+
+        .filters__popularity__title {
+            margin-bottom: 2vh;
+            font-size: 1.5vw;
+            font-weight: 400;
+            color: colors.$white;
+            text-align: center;
+        }
+
+        .filters__popularity__slider {
+            color: colors.$green;
+        }
+    }
+
+    .filters__create {
+        margin-bottom: 12vh;
+
+        .filters__create__button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            padding: 1vw;
+            font-size: 1vw;
+            font-weight: 700;
+            border-radius: 0.2vw;
+            background-color: colors.$green;
+            color: colors.$black;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: colors.$lightGreen;
+            }
+        }
+    }
+}
+
+.green {
+    font-weight: 700;
+    color: colors.$green;
+}
+
+.modal {
+    position: relative;
+    background-color: colors.$lightGreen;
+    padding: 4vw;
+    padding-bottom: 3vw;
+
+    .modal__title {
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+        font-size: 1.2vw;
+        font-weight: 700;
+        color: colors.$black;
+        text-align: center;
+    }
+
+    .modal__link {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+        padding: 1vw;
+        border: 0.2vw solid colors.$white;
+        background-color: colors.$black;
+        border-radius: 2vw;
+        font-size: 0.8vw;
+        font-weight: 400;
+        color: colors.$white;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: colors.$green;
+            border: 0.2vw solid colors.$green;
+        }
+
+
+        .modal__link__img {
+            display: inline-block;
+            width: 4vw;
+            margin-left: 0.5vw;
+        }
+    }
+
+    .modal__close {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        padding: 0.5vw;
+        font-size: 0.75vw;
+        font-weight: 700;
+        border-radius: 0.2vw;
+        background-color: colors.$green;
+        color: colors.$black;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: colors.$black;
+            color: colors.$green;
+        }
+    }
+}
+
+.MuiBackdrop-root {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}

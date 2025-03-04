@@ -1,7 +1,5 @@
 "use client"
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
 import Spotify from '../Spotify/Spotify';
 
 const Header = () => {
@@ -13,7 +11,7 @@ const Header = () => {
 
         <h1 className='header__title'>The <span className='header__title--green'>Timeline</span> Playlist</h1>
 
-        <h2 className='header__subtitle'>Create a playlist with one song for each year, to be listened chronologically</h2>
+        <h2 className='header__subtitle'>Create a playlist with one song for each year, to listen chronologically</h2>
 
     </div>
   );

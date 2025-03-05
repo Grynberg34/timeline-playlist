@@ -1,6 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { setTimelineRange, setGenres } from '../actions/filtersActions';
 import { clearToken } from "@/store/actions/spotifyActions";
+import { resetPlaylist } from "@/store/actions/playlistActions";
 
 interface FiltersState {
   timelineRange: { start: number; end: number };
@@ -26,7 +27,8 @@ const filtersReducer = createReducer(initialState, (builder) => {
     .addCase(setGenres, (state, action) => {
       state.genres.selected = action.payload;
     })
-    .addCase(clearToken, () => initialState); 
+    .addCase(clearToken, () => initialState)
+    .addCase(resetPlaylist, () => initialState);  
 });
 
 export default filtersReducer;

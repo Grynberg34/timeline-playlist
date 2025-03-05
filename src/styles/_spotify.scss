@@ -67,6 +67,24 @@
                 }
             }
         }
+
+        .spotify__dashboard__button {
+            display: block;
+            padding: 0.75vw;
+            font-size: 0.85vw;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 700;
+            border-radius: 0.6vw;
+            text-transform: capitalize;
+            border: none;
+            background-color: colors.$lightGreen;
+            color: colors.$black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: colors.$white;
+            }
+        }
     }
 
 }

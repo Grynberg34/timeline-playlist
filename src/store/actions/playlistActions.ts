@@ -5,9 +5,15 @@ export const createPlaylist = createAsyncThunk(
     async (_, { getState, dispatch }) => {
       const state: any = getState();
       const accessToken = state.spotify.accessToken;
-  
+      const genres = state.filters.genres.selected;
+      const { start, end } = state.filters.timelineRange;
+
       if (!accessToken) throw new Error("No access token found");
-  
+
+      const playlistName = `The Timeline Playlist (${start} - ${end})`;
+      const genresDescription = genres.length > 0 ? `Genres: ${genres.join(", ")}.` : "No specific genre selected.";
+      const playlistDescription = `The Timeline Playlist curates one song for each year within the chosen range. ${genresDescription}`;
+
       const response = await fetch(`https://api.spotify.com/v1/me/playlists`, {
         method: "POST",
         headers: {
@@ -15,24 +21,24 @@ export const createPlaylist = createAsyncThunk(
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: "The Timeline Playlist",
-          description: "The Timeline Playlist curates one song for each year within a chosen range, filtered by genre.",
+          name: playlistName,
+          description: playlistDescription,
           public: "false"
         }),
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         console.error("Error creating playlist:", errorData);
         throw new Error("Failed to create playlist");
       }
-  
+
       const data = await response.json();
       const playlistId = data.id;
       const playlistLink = data.external_urls.spotify;
-  
+
       dispatch(fetchSongsForYear({ playlistId }));
-  
+
       return { playlistId, playlistLink };
     }
 );
@@ -96,6 +102,8 @@ export const fetchSongsForYear = createAsyncThunk(
           }
 
           dispatch(setPlaylistCreated());
+        } else {
+          dispatch(setPlaylistCreated());
         }
       } catch (error) {
         console.error("Error occurred while fetching songs:", error);
@@ -107,3 +115,5 @@ export const fetchSongsForYear = createAsyncThunk(
 export const updateSongsByYear = createAction<{ year: number; song: any }>("playlist/updateSongsByYear");
 
 export const setPlaylistCreated = createAction("playlist/setPlaylistCreated");
+
+export const resetPlaylist = createAction('spotify/resetPlaylist');

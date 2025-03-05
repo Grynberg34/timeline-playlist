@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { createPlaylist, updateSongsByYear, setPlaylistCreated } from "../actions/playlistActions";
+import { createPlaylist, updateSongsByYear, setPlaylistCreated, resetPlaylist } from "../actions/playlistActions";
 import { clearToken } from "@/store/actions/spotifyActions";
 
 interface PlaylistState {
@@ -38,7 +38,8 @@ const playlistSlice = createSlice({
       .addCase(setPlaylistCreated, (state) => {
         state.created = true;
       })
-      .addCase(clearToken, () => initialState); 
+      .addCase(clearToken, () => initialState) 
+      .addCase(resetPlaylist, () => initialState); 
   },
 });
 

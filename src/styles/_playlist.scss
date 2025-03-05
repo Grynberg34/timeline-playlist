@@ -1,0 +1,97 @@
+@use 'font';
+@use 'colors';
+
+.playlist {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    margin-top: 2vh;
+    margin-bottom: 12vh;
+
+
+    .playlist__header {
+        position: sticky;
+        top: 0vh;
+        padding-top: 4vh;
+        padding-bottom: 2vh;
+        z-index: 10;
+        background-color: colors.$black;
+
+        .playlist__header__link {
+            display: block;
+            padding: 1vw;
+            background-color: colors.$green;
+            border-radius: 0.2vw;
+            margin-bottom: 4vh;
+            font-size: 1vw;
+            font-weight: 700;
+            text-align: center;
+            color: colors.$black;
+            cursor: pointer;
+            text-decoration: none;
+    
+            &:hover {
+                background-color: colors.$lightGreen;
+            }
+        }
+
+        .playlist__header__text {
+            display: block;
+            padding: 1vw;
+            background-color: colors.$green;
+            border-radius: 0.2vw;
+            margin-bottom: 4vh;
+            font-size: 1vw;
+            font-weight: 700;
+            text-align: center;
+            color: colors.$black;
+
+            .playlist__header__text__gif {
+                display: inline-block;
+                margin-left: 0.5vw;
+                width: 2.5%;
+            }
+        }
+    }
+
+    .playlist__song {
+        margin-bottom: 2vh;
+        padding: 0.5vw;
+        border: 0.2vw solid colors.$grey;
+        border-radius: 0.2vw;
+
+        .playlist__song__year {
+            font-size: 1vw;
+            font-weight: 700;
+            color: colors.$lightGreen;
+            text-align: center;
+        }
+
+        .playlist__song__img {
+            width: 40%;
+            border-radius: 0.2vw;
+            margin-top: 0.25vw;
+        }
+
+        .playlist__song__name {
+            margin-bottom: 0.5vh;
+            font-size: 0.8vw;
+            font-weight: 600;
+            color: colors.$green;
+            
+        }
+
+        .playlist__song__artist {
+            font-size: 0.6vw;
+            font-weight: 400;
+            font-style: italic;
+            color: colors.$white;
+        }
+
+        .playlist__song__duration {
+            font-size: 1vw;
+            font-weight: 700;
+            color: colors.$white;
+            text-align: left;
+        }
+    }
+}

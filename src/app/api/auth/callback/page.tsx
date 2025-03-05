@@ -32,7 +32,7 @@ const Callback = () => {
 
   return (
     <div className='callback'>
-      <h1 className='callback__msg'>Loading...</h1>
+      <img className='callback__img' src="/loading.gif" alt="" />
     </div>
   )
 };

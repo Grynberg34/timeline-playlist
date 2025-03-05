@@ -26,7 +26,7 @@
     }
 
     .filters__genres {
-        margin-bottom: 6vh;
+        margin-bottom: 10vh;
 
         .filters__genres__title {
             margin-bottom: 2vh;
@@ -47,40 +47,27 @@
         }
 
         .filters__genres__toggle {
+            display: block;
             width: 100%;
-            margin-top: 2vh;
-            padding-top: 0.5vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1vh;
+            padding-top: 1vw;
             padding-bottom: 0.5vw;
-            font-size: 0.75vw;
+            font-size: 0.85vw;
             font-family: "proxima-nova", sans-serif;
             font-weight: 700;
             border-radius: 0.2vw;
             text-transform: capitalize;
-            background-color: colors.$lightGreen;
+            background-image: linear-gradient(to bottom, colors.$black 0%, colors.$lightGreen 100%);
             border: none;
             color: colors.$black;
             cursor: pointer;
 
             &:hover {
-                background-color: colors.$white;
+                background-image: linear-gradient(to bottom, colors.$black 0%, colors.$white 100%);
             }
 
-        }
-    }
-
-    .filters__popularity {
-        margin-bottom: 6vh;
-
-        .filters__popularity__title {
-            margin-bottom: 2vh;
-            font-size: 1.5vw;
-            font-weight: 400;
-            color: colors.$white;
-            text-align: center;
-        }
-
-        .filters__popularity__slider {
-            color: colors.$green;
         }
     }
 
@@ -91,7 +78,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 40%;
+            width: 100%;
             padding: 1vw;
             font-size: 1vw;
             font-weight: 700;

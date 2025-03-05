@@ -1,10 +1,10 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { setTimelineRange, setGenres, setPopularityRange } from '../actions/filtersActions';
+import { setTimelineRange, setGenres } from '../actions/filtersActions';
+import { clearToken } from "@/store/actions/spotifyActions";
 
 interface FiltersState {
   timelineRange: { start: number; end: number };
   genres: { all: string[]; selected: string[] };
-  popularityRange: { min: number; max: number };
 }
 
 const allGenres = [
@@ -16,7 +16,6 @@ const allGenres = [
 const initialState: FiltersState = {
   timelineRange: { start: 1950, end: 2025 },
   genres: { all: allGenres, selected: [] },
-  popularityRange: { min: 0, max: 100 },
 };
 
 const filtersReducer = createReducer(initialState, (builder) => {
@@ -27,9 +26,7 @@ const filtersReducer = createReducer(initialState, (builder) => {
     .addCase(setGenres, (state, action) => {
       state.genres.selected = action.payload;
     })
-    .addCase(setPopularityRange, (state, action) => {
-      state.popularityRange = action.payload;
-    });
+    .addCase(clearToken, () => initialState); 
 });
 
 export default filtersReducer;

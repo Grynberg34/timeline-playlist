@@ -3,16 +3,12 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import TimelineFilter from '../Filters/TimelineFilter';
 import GenresFilter from '../Filters/GenresFilter';
-import PopularityFilter from '../Filters/PopularityFilter';
 import CreatePlaylistButton from '../Filters/CreatePlaylistButton';
 import Dialog from '@mui/material/Dialog';
 
 const Filters = () => {
   const accessToken = useSelector((state: RootState) => state.spotify.accessToken);
-  const filters = useSelector((state: RootState) => state.filters);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  console.log(filters)
 
   const handleInteraction = (e: React.MouseEvent) => {
     if (!accessToken && !isModalOpen) {
@@ -29,7 +25,6 @@ const Filters = () => {
     <div className='filters' onClick={handleInteraction}>
       <TimelineFilter />
       <GenresFilter />
-      <PopularityFilter />
 
       <CreatePlaylistButton />
 

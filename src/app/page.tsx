@@ -1,10 +1,15 @@
 "use client";
+import { useSelector } from "react-redux";
 import Header from '../components/Header/Header';
 import Filters from '../components/Filters/Filters';
+import Playlist from '../components/Playlist/Playlist';
 import Grid from '@mui/material/Grid2';
-
+import { RootState } from '@/store/store';
 
 export default function Home() {
+
+  const playlistId = useSelector((state: RootState) => state.playlist.playlistId);
+
   return (
     <div className="home">
 
@@ -16,7 +21,7 @@ export default function Home() {
 
           <Header />
 
-          <Filters />
+          {playlistId ? <Playlist /> : <Filters />}
 
         </Grid>
 

@@ -88,3 +88,72 @@
     }
 
 }
+
+
+@media only screen and (max-width: 767px) {
+
+    .spotify {
+
+        .spotify__login {
+    
+            .spotify__login__link {
+                padding: 4vw;
+                border: 0.2vw solid colors.$white;
+                border-radius: 5vw;
+                font-size: 3.5vw;
+    
+                &:hover {
+                    color: colors.$white;
+                    border: 0.2vw solid colors.$white;
+                }
+    
+    
+                .spotify__login__link__img {
+                    width: 14vw;
+                    margin-left: 2vw;
+                }
+            }
+        }
+    
+        .spotify__dashboard {
+            .spotify__dashboard__content {
+                padding: 3vw;
+                border: 0.2vw solid colors.$white;
+                border-radius: 6vw;
+    
+                .spotify__dashboard__content__img {
+                    width: 6vw;
+                    margin-right: 4vw;
+                    border-radius: 6vw;
+                }
+        
+                .spotify__dashboard__content__name {
+                    font-size: 3vw;
+                    font-weight: 400;
+                }
+        
+                .spotify__dashboard__content__logout {
+                    font-size: 4vw;
+                    margin-left: 4vw;
+    
+                    &:hover {
+                        color: colors.$green;
+                    }
+                }
+            }
+    
+            .spotify__dashboard__button {
+                padding: 3vw;
+                margin-top: 0.5vh;
+                font-size: 3vw;
+                border-radius: 0.6vw;
+    
+                &:hover {
+                    background-color: colors.$white;
+                }
+            }
+        }
+    
+    }
+
+}

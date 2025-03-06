@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store/store";
 import { setGenres } from "@/store/actions/filtersActions"
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid2';
 import { FormControlLabel, Checkbox } from "@mui/material";
 
 const GenresFilter = () => {
@@ -29,7 +29,7 @@ const GenresFilter = () => {
 
       <Grid container spacing={2}>
         {visibleGenres.map((genre) => (
-          <Grid item xs={6} sm={3} key={genre}>
+          <Grid size={{ xs: 6, sm: 3 }} key={genre}>
             <FormControlLabel
               className="filters__genres__genre"
               control={

@@ -14,7 +14,7 @@ const Playlist = () => {
 
             {playlist.created ? (
             <a className="playlist__header__link" href={playlist.playlistLink || "#"} target="_blank" rel="noreferrer">
-                Listen to playlist on Spotify
+                Listen on Spotify
             </a>
             ) : (
             <h1 className="playlist__header__text">Creating playlist <img className="playlist__header__text__gif" src="/creating.gif" alt="" /></h1>

@@ -42,7 +42,7 @@ const SpotifyDashboard = () => {
 
       <Grid container spacing={2}>
 
-        <Grid size={{ xs: 8, sm: 8 }}>
+        <Grid size={{ xs: 5, sm: 8 }}>
 
           {
             playlist.playlistId?
@@ -53,7 +53,7 @@ const SpotifyDashboard = () => {
         </Grid>
   
 
-        <Grid size={{ xs: 4, sm: 4 }}>
+        <Grid size={{ xs: 7, sm: 4 }}>
           <div className="spotify__dashboard__content">
             {user.images && (
               <img src={user.images[0].url} alt={user.name} className="spotify__dashboard__content__img" />

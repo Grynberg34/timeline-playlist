@@ -168,3 +168,120 @@
 .MuiBackdrop-root {
     background-color: rgba(0, 0, 0, 0.85) !important;
 }
+
+
+@media only screen and (max-width: 767px) {
+
+    .filters {
+        display: block;
+        width: 90%;
+        margin-top: 6vh;
+    
+    
+        .filters__timeline {
+            margin-bottom: 4vh;
+    
+            .filters__timeline__title {
+                margin-bottom: 4vh;
+                font-size: 5vw;
+            }
+    
+        }
+    
+        .filters__genres {
+            margin-bottom: 8vh;
+    
+            .filters__genres__title {
+                margin-bottom: 3vh;
+                font-size: 5vw;
+            }
+    
+            .filters__genres__genre {
+                font-size: 3vw;
+                font-weight: 400;
+                color: colors.$lightGreen;
+    
+                .filters__genres__genre__checkbox {
+                    color: colors.$white;
+                }
+            }
+    
+            .filters__genres__toggle {
+                margin-top: 2vh;
+                padding-top: 2vw;
+                padding-bottom: 1vw;
+                font-size: 3.4vw;
+                border-radius: 0.4vw;
+    
+                &:hover {
+                    background-image: linear-gradient(to bottom, colors.$black 0%, colors.$lightGreen 100%);
+                }
+    
+            }
+        }
+    
+        .filters__create {
+            margin-bottom: 10vh;
+    
+            .filters__create__button {
+                padding: 3vw;
+                font-size: 4.5vw;
+                border-radius: 0.4vw;
+    
+                &:hover {
+                    background-color: colors.$green;
+                }
+            }
+        }
+    }
+    
+    .modal {
+        padding: 8vw;
+        padding-bottom: 3vw;
+    
+        .modal__title {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4vh;
+            margin-bottom: 4vh;
+            font-size: 4.5vw;
+        }
+    
+        .modal__link {
+            width: 75%;
+            margin-bottom: 4vh;
+            padding: 2vw;
+            border: 0.2vw solid colors.$white;
+            border-radius: 4vw;
+            font-size: 4vw;
+            font-weight: 400;
+    
+            &:hover {
+                color: colors.$green;
+                border: 0.2vw solid colors.$white;
+            }
+    
+    
+            .modal__link__img {
+                width: 14vw;
+                margin-left: 2vw;
+            }
+        }
+    
+        .modal__close {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            padding: 2vw;
+            font-size: 3vw;
+            border-radius: 0.4vw;
+    
+            &:hover {
+                background-color: colors.$green;
+                color: colors.$black;
+            }
+        }
+    }
+
+}

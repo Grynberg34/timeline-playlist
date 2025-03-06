@@ -5,3 +5,12 @@
     background-color: colors.$black;
     min-height: 100vh;
 }
+
+@media only screen and (max-width: 767px) {
+
+    .home {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+}

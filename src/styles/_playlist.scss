@@ -95,3 +95,77 @@
         }
     }
 }
+
+@media only screen and (max-width: 767px) {
+
+    .playlist {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        margin-top: 2vh;
+        margin-bottom: 12vh;
+    
+    
+        .playlist__header {
+            position: sticky;
+            top: 0vh;
+            padding-top: 4vh;
+            padding-bottom: 2vh;
+            z-index: 10;
+    
+            .playlist__header__link {
+                padding: 4vw;
+                border-radius: 0.4vw;
+                margin-bottom: 4vh;
+                font-size: 4vw;
+        
+                &:hover {
+                    background-color: colors.$green;
+                }
+            }
+    
+            .playlist__header__text {
+                padding: 2vw;
+                border-radius: 0.4vw;
+                margin-bottom: 4vh;
+                font-size: 4vw;
+    
+                .playlist__header__text__gif {
+                    margin-left: 2vw;
+                    width: 4%;
+                }
+            }
+        }
+    
+        .playlist__song {
+            margin-bottom: 3vh;
+            padding: 2vw;
+            border: 0.6vw solid colors.$grey;
+            border-radius: 0.4vw;
+    
+            .playlist__song__year {
+                font-size: 3.5vw;
+            }
+    
+            .playlist__song__img {
+                width: 100%;
+                border-radius: 0.2vw;
+                margin-top: 0.25vw;
+            }
+    
+            .playlist__song__name {
+                margin-bottom: 0.5vh;
+                font-size: 3vw;
+            }
+    
+            .playlist__song__artist {
+                font-size: 2.5vw;
+            }
+    
+            .playlist__song__duration {
+                font-size: 3.5vw;
+            }
+        }
+    }
+    
+
+}

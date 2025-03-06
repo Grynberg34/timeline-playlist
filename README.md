@@ -16,12 +16,12 @@ The Timeline Playlist is a **React + Next.js + TypeScript** web application that
 - **Sass** – Modular and maintainable styling.
 
 ## Live Demo
-Check out the live version of The Timeline Playlist: 
+Check out the live version of The Timeline Playlist: https://timeline-playlist-8j27p.ondigitalocean.app/
 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/the-timeline-playlist.git
+   git clone https://github.com/Grynberg34/timeline-playlist
    cd the-timeline-playlist
    ```
 2. Install dependencies:

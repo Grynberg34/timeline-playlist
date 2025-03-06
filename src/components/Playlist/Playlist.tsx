@@ -38,7 +38,7 @@ const Playlist = () => {
                     <Grid size={{ xs: 6, sm: 6 }}>
                         <div className="playlist__song__name">{song.name}</div>
                         <div className="playlist__song__artist">
-                        {song?.artists?.map((artist: any) => artist.name).join(", ")}
+                        {song?.artists?.map((artist: { name: string }) => artist.name).join(", ")}
                         </div>
                     </Grid>
 

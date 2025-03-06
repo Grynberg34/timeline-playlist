@@ -37,7 +37,7 @@
         }
 
         .filters__genres__genre {
-            font-size: 0.4vw;
+            font-size: 0.8vw !important;
             font-weight: 400;
             color: colors.$lightGreen;
 
@@ -197,7 +197,7 @@
             }
     
             .filters__genres__genre {
-                font-size: 3vw;
+                font-size: 3vw !important;
                 font-weight: 400;
                 color: colors.$lightGreen;
     

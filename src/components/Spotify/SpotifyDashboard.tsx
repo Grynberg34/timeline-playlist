@@ -55,7 +55,7 @@ const SpotifyDashboard = () => {
 
         <Grid size={{ xs: 7, sm: 4 }}>
           <div className="spotify__dashboard__content">
-            {user.images && (
+            {user.images?.length && (
               <img src={user.images[0].url} alt={user.name} className="spotify__dashboard__content__img" />
             )}
             <h1 className="spotify__dashboard__content__name">{user.name}</h1>

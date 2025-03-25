@@ -65,7 +65,7 @@ const Legal = () => {
 
         <div className="legal__section__block">
           <h3 className="legal__section__block__title">3. User Responsibilities</h3>
-          <p className="legal__section__block__text">You must comply with Spotify’s Terms of Service while using our app. You may not use the app for unauthorized purposes, such as redistributing content from Spotify in violation of their API policies.</p>
+          <p className="legal__section__block__text">You must comply with Spotify&apos;s Terms of Service while using our app. You may not use the app for unauthorized purposes, such as redistributing content from Spotify in violation of their API policies.</p>
         </div>
 
         <div className="legal__section__block">
@@ -75,7 +75,7 @@ const Legal = () => {
 
         <div className="legal__section__block">
           <h3 className="legal__section__block__title">5. Limitation of Liability</h3>
-          <p className="legal__section__block__text">We provide this app "as is" without warranties of any kind. We are not responsible for any issues that arise from using Spotify’s API, including service interruptions or policy changes.</p>
+          <p className="legal__section__block__text">We provide this app &apos;as is&apos; without warranties of any kind. We are not responsible for any issues that arise from using Spotify&apos;s API, including service interruptions or policy changes.</p>
         </div>
 
         <div className="legal__section__block">

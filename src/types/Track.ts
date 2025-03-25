@@ -1,12 +1,14 @@
 export interface Track {
-    id: string;
+  id: string;
+  name: string;
+  artists: { name: string; external_urls: {spotify: string} }[];
+  album: { 
     name: string;
-    artists: { name: string }[];
-    album: { 
-      name: string;
-      images: { url: string }[];
-    };
-    uri: string;
-    duration_ms: number;
+    images: { url: string }[];
+    external_urls: {spotify: string}
+  };
+  uri: string;
+  duration_ms: number;
+  external_urls: {spotify: string}
 }
   

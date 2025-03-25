@@ -17,11 +17,12 @@
         background-color: colors.$black;
 
         .playlist__header__link {
-            display: block;
+            display: flex;
+            margin-bottom: 4vh;
+            justify-content: center;
             padding: 1vw;
             background-color: colors.$green;
             border-radius: 0.2vw;
-            margin-bottom: 4vh;
             font-size: 1vw;
             font-weight: 700;
             text-align: center;
@@ -31,6 +32,13 @@
     
             &:hover {
                 background-color: colors.$lightGreen;
+            }
+
+            .playlist__header__link__logo {
+                display: inline-block;
+                margin-left: 0.5vw;
+                width: 11%;
+                align-items: center;
             }
         }
 
@@ -64,27 +72,47 @@
             font-weight: 700;
             color: colors.$lightGreen;
             text-align: center;
+            user-select: none;
         }
 
         .playlist__song__img {
+            display: block;
             width: 40%;
             border-radius: 0.2vw;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 0.25vw;
         }
 
         .playlist__song__name {
-            margin-bottom: 0.5vh;
+            display: block;
             font-size: 0.8vw;
             font-weight: 600;
             color: colors.$green;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
             
         }
 
         .playlist__song__artist {
+            display: inline-block;
             font-size: 0.6vw;
             font-weight: 400;
             font-style: italic;
             color: colors.$white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            .playlist__song__artist__comma {
+                display: inline-block;
+                margin-right: 0.25vw;
+            }
         }
 
         .playlist__song__duration {
@@ -92,6 +120,14 @@
             font-weight: 700;
             color: colors.$white;
             text-align: left;
+            user-select: none;
+        }
+
+        .playlist__song__logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
         }
     }
 }
@@ -99,8 +135,8 @@
 @media only screen and (max-width: 767px) {
 
     .playlist {
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 8vw;
+        padding-right: 8vw;
         margin-top: 2vh;
         margin-bottom: 12vh;
     
@@ -120,6 +156,11 @@
         
                 &:hover {
                     background-color: colors.$green;
+                }
+
+                .playlist__header__link__logo {
+                    width: 20%;
+                    margin-left: 2vw;
                 }
             }
     
@@ -147,22 +188,28 @@
             }
     
             .playlist__song__img {
-                width: 100%;
-                border-radius: 0.2vw;
                 margin-top: 0.25vw;
+                border-radius: 0.2vw;
+                width: 100%;
             }
     
             .playlist__song__name {
-                margin-bottom: 0.5vh;
-                font-size: 3vw;
+                font-size: 2.75vw;
             }
     
             .playlist__song__artist {
-                font-size: 2.5vw;
+                font-size: 2.25vw;
             }
     
             .playlist__song__duration {
-                font-size: 3.5vw;
+                display: none;
+            }
+
+            .playlist__song__logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
             }
         }
     }

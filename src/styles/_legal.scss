@@ -1,0 +1,117 @@
+@use 'font';
+@use 'colors';
+
+.legal {
+    background-color: colors.$black;
+    min-height: 100vh;
+    padding-top: 4vw;
+    padding-bottom: 12vw;
+
+    .legal__section {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vw;
+        width: 50%;
+        padding: 2vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        border: 0.25vw solid colors.$green;
+
+        .legal__section__title {
+            margin-top: 0;
+            margin-bottom: 2vw;
+            margin-top: 1vw;
+            font-size: 2.5vw;
+            font-weight: 700;
+            color: colors.$green;
+            text-align: center;
+        }
+
+        .legal__section__subtitle {
+            margin-top: 0;
+            margin-bottom: 1vw;
+            font-size: 1vw;
+            font-weight: 400;
+            font-style: italic;
+            color: colors.$white;
+            text-align: center;
+
+            &:last-of-type {
+                margin-bottom: 4vw;
+            }
+        }
+
+        .legal__section__block {
+            margin-bottom: 2vw;
+
+            .legal__section__block__title {
+                margin-top: 0;
+                margin-bottom: 0.5vw;
+                font-size: 1vw;
+                font-weight: 700;
+                color: colors.$green;
+            }
+
+            .legal__section__block__text {
+                width: 90%;
+                margin-top: 0;
+                font-size: 0.75vw;
+                font-weight: 400;
+                color: colors.$white;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .legal {
+        padding-top: 12vw;
+        padding-bottom: 24vw;
+    
+        .legal__section {
+            margin-top: 10vw;
+            width: 75%;
+            padding: 6vw;
+            padding-left: 6vw;
+            padding-right: 6vw;
+            border: 0.25vw solid colors.$green;
+    
+            .legal__section__title {
+                margin-top: 0;
+                margin-bottom: 4vw;
+                margin-top: 4vw;
+                font-size: 7vw;
+            }
+    
+            .legal__section__subtitle {
+                margin-top: 0;
+                margin-bottom: 4vw;
+                font-size: 3vw;
+    
+                &:last-of-type {
+                    margin-bottom: 12vw;
+                }
+            }
+    
+            .legal__section__block {
+                margin-bottom: 8vw;
+    
+                .legal__section__block__title {
+                    margin-top: 0;
+                    margin-bottom: 2vw;
+                    font-size: 4vw;
+                }
+    
+                .legal__section__block__text {
+                    width: 90%;
+                    margin-top: 0;
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+}

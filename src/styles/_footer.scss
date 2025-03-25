@@ -1,0 +1,43 @@
+@use 'font';
+@use 'colors';
+
+.footer {
+    position: fixed;
+    width: 100%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    bottom: 0;
+    background-color: colors.$grey;
+    text-align: center;
+
+    .footer__link {
+      color: colors.$lightGreen;
+      font-size: 0.8vw;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: colors.$green;
+      }
+    }
+  
+}
+
+@media only screen and (max-width: 767px) {
+    .footer {
+        position: fixed;
+        width: 100vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    
+        .footer__link {
+          font-size: 4vw;
+    
+          &:hover {
+            color: colors.$green;
+          }
+        }
+      
+    }
+}

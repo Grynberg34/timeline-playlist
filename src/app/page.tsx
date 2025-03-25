@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Header from '../components/Header/Header';
 import Filters from '../components/Filters/Filters';
 import Playlist from '../components/Playlist/Playlist';
+import Footer from '../components/Footer/Footer';
 import Grid from '@mui/material/Grid2';
 import { RootState } from '@/store/store';
 
@@ -26,6 +27,8 @@ export default function Home() {
         </Grid>
 
       </Grid>
+
+      <Footer />
 
     </div>
   );

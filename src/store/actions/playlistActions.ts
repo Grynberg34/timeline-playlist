@@ -61,7 +61,7 @@ export const fetchSongsForYear = createAsyncThunk(
       for (let year = start; year <= end; year++) {
         const genreQuery = genres.length > 0 ? `genre:${genres.join(" ")}` : "";
         const query = encodeURIComponent(`${genreQuery} year:${year}`);
-        const url = `https://api.spotify.com/v1/search?q=${query}&type=track&limit=50`;
+        const url = `https://api.spotify.com/v1/search?q=${query}&type=track&limit=50&market=US`;
 
         const response = await fetch(url, {
           headers: { Authorization: `Bearer ${accessToken}` },

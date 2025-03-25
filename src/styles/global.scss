@@ -6,6 +6,8 @@
 @use 'callback';
 @use 'filters';
 @use 'playlist';
+@use 'legal';
+@use 'footer';
 
 body {
     font-family: "proxima-nova", sans-serif;

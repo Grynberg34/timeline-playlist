@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='footer'>
 
-        <Link className='footer__link' href="/legal">Privacy Policy & Terms of Service</Link>
+        <Link className='footer__link' href="/legal">Terms of Service & Privacy Policy</Link>
 
     </div>
   );

@@ -1,8 +1,8 @@
-'use client'; // Ensure this is client-side code
+'use client';
 
 import { ReactNode } from "react";
 import { Provider } from "react-redux";
-import store from "./store"; // Import only the store
+import store from "./store";
 
 interface StoreProviderProps {
   children: ReactNode;
